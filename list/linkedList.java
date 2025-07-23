@@ -13,8 +13,6 @@ class ssl{
         head = newNode;
     }
 
-   
-
     void InsertLast(int val){
         node Newnode = new node();
         Newnode.data = val;
@@ -39,6 +37,21 @@ class ssl{
         temp.next = null;
     }
 
+    void insertPos(int val , int pos){
+        node Newnode = new node();
+        Newnode.data = val;
+        if(pos==1){
+            InsertFirst(val);
+            return;
+        }
+        node temp = head;
+        for(int i =1 ;i<pos-1;i++){
+            temp = temp.next;
+        }
+        Newnode.next = temp.next;
+        temp.next = Newnode;
+    }
+
     void display(){
         node temp = head;
         while(temp!=null){
@@ -55,8 +68,9 @@ public class linkedList {
         s.InsertFirst(50);
         s.InsertFirst(10);
         s.InsertLast(100);
-         s.deleteFirst();
-         s.deleteLast();
+        s.insertPos(10, 5);
+        //  s.deleteFirst();
+        //  s.deleteLast();
         s.display();
        
     }
