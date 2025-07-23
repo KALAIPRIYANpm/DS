@@ -31,6 +31,14 @@ class ssl{
         head = head.next;
     }
 
+    void deleteLast(){
+        node temp = head;
+        while(temp.next.next!=null){
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+
     void display(){
         node temp = head;
         while(temp!=null){
@@ -48,6 +56,7 @@ public class linkedList {
         s.InsertFirst(10);
         s.InsertLast(100);
          s.deleteFirst();
+         s.deleteLast();
         s.display();
        
     }
