@@ -120,6 +120,18 @@ class Dll {
             temp = temp.next;
         }
     }
+
+    void  desplay_rev(){
+        node temp = head;
+        while(temp.next!=null){
+            temp = temp.next;
+        }
+        System.out.println("Reverse check");
+        while(temp!=null){
+            System.out.println(temp.data+" ");
+            temp = temp.prev;
+        }
+    }
 }
 
 public class DoublyLinkedList {
@@ -132,5 +144,6 @@ public class DoublyLinkedList {
         obj.insertPos(40, 3);
         obj.deletePos(1);
         obj.display();
+        obj.desplay_rev();
     }
 }
