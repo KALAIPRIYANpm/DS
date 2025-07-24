@@ -35,6 +35,26 @@ class Dll {
         nn.prev = temp;
     }
     
+    void insertPos(int val , int pos){
+        node nn = new node();
+        nn.data = val;
+        if(pos==1){
+            insertFirst(val);
+            return;
+        }
+        node temp = head;
+        for(int i = 1 ;i<pos-1; i++){
+            temp=temp.next;
+  
+        }
+            nn.next = temp.next;
+            nn.prev = temp;
+            if(temp.next!=null){
+                temp.next.prev = nn;
+            }
+            
+            temp.next = nn;
+    }
 
     void display() {
         node temp = head;
@@ -50,8 +70,9 @@ public class DoublyLinkedList {
         Dll obj = new Dll();
         obj.insertFirst(5);
         obj.insertFirst(10);
-        obj.insertFirst(15);
+        // obj.insertFirst(15);
         obj.insertLast(20);
+        obj.insertPos(40, 3);
         obj.display();
     }
 }
