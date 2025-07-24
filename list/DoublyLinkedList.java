@@ -73,6 +73,46 @@ class Dll {
         }
  }
 
+ void deleteAtLast(){
+    if(head==null){
+        System.out.println("List is Empty");
+        return;
+    }
+    if(head.next==null){
+        head=null;
+        return;
+    }
+    node temp = head;
+
+    while(temp.next!=null){
+        temp=temp.next;
+    }
+    temp.prev.next = null;
+    temp.prev = null;
+ }
+
+ void deletePos(int pos){
+    if(pos<1){
+        System.out.println("Invalid");
+        return;
+    }
+    if(pos==1){
+        deleteAtFirst();
+        return;
+    }
+    node temp = head;
+    for(int i =1;temp!=null&&i<pos;i++){
+        temp = temp.next;
+    }
+    if(temp==null){
+        System.out.println("Out of Range");
+        return;
+    }
+    temp.prev.next = temp.next;
+    if(temp.next!=null){
+         temp.next.prev = temp.prev;
+    }
+ }
     void display() {
         node temp = head;
         while (temp != null) {
@@ -86,10 +126,11 @@ public class DoublyLinkedList {
     public static void main(String[] args){
         Dll obj = new Dll();
         obj.insertFirst(5);
-        obj.deleteAtFirst();
+        // obj.deleteAtFirst();
         obj.insertFirst(10);
         obj.insertLast(20);
         obj.insertPos(40, 3);
+        obj.deletePos(1);
         obj.display();
     }
 }
