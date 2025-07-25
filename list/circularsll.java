@@ -34,7 +34,7 @@ class cll{
 }
 
 public class circularsll {
-    public static void main(String[] args) {
+    public static void main(String[] args){
        cll obj = new cll();
        obj.insertFirst(5);
        obj.insertFirst(10);
@@ -42,3 +42,4 @@ public class circularsll {
        obj.display();
     }  
 }
+
