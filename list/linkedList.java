@@ -1,4 +1,4 @@
-package list;
+// package list;
 class node{
     int data;
     node next;
