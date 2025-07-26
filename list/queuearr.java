@@ -37,7 +37,7 @@ class queue{
 
 
 public class queuearr {
-    public static void main(String[] args) {
+    public static void main(String[] args) {33
         queue obj = new queue();
         obj.enqueue(5);
         obj.enqueue(3);
