@@ -8,11 +8,12 @@ import java.util.Queue;
 public class dq {
       public static void main(String[] args) {
         Deque<Integer>arr = new LinkedList<>();
-        arr.add(10);  //offer can also be used instead of add
+        arr.addFirst(10);  //offer can also be used instead of add
         arr.addFirst(100);
         arr.addLast(20);
-        arr.add(40);
-        arr.add(30);
+        // arr.add(40);
+        // arr.add(30);
+        arr.addLast(30);
         // arr.add(40);
         System.out.println(arr);
         // arr.remove(2);
