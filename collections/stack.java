@@ -12,6 +12,7 @@ public class stack {
         arr.push(20);
         arr.push(30);
         arr.push(40);
+
         System.out.println(arr);
         // arr.remove(2);
         arr.pop();
